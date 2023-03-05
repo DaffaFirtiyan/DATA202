@@ -1,0 +1,89 @@
+---
+title: "My First RMarkdown"
+author: "Daffa"
+date: "2023-03-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Following the workbook
+
+### Blocks of text
+
+Single asterisk makes the text *italics*. Double asterisks makes the text **bold**.
+
+Using hash or multiple creates.
+
+# Heading 1
+## Heading 2
+### Heading 3
+
+The more hashes, the smaller the heding.
+
+To create a list you can use:
+
+   * this is
+   * a bullet
+   * list of items
+
+**or**
+
+1. this is
+2. a numbered
+3. list of items
+
+### Blocks of formatted code/output that are not executed
+
+To show code without executing them, you write the code between two lines with six or more tildes ~
+
+~~~~~
+x <- 4
+~~~~~
+
+### Blocks of formatted code that may be executed
+
+* They begin and end with a triple back tick `
+* If the chunk is going to be **shown, executed** and its output **displayed** then just put {r} after the first back tick
+* Inside the braces, you can put options such as:
+* eval=TRUE if the code is to be **run**, FALSE if not
+* echo=TRUE if the code is to be *shown**, FALSE if not
+* results=TRUE if the output of the code is to be **displayed**, FALSE if not
+* error=TRUE if error messages are to be displayed, rather than just crashing the knitting of the file.
+* include=FALSE if the code is to be executed, but the code should not be dislplayed, the output should not be shown either
+
+For example:
+
+~~~~~~
+```{r}
+seq(1,10)
+```
+~~~~~~
+
+Will display:
+
+```{r}
+seq(1,10)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
