@@ -1,0 +1,113 @@
+---
+title: "Simple R Objects"
+author: "Daffa"
+date: "2023-03-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Simple R Objects
+
+### Types of Data
+
+* **class** - dividing variables into logical, numerical, character or factor
+* **type** - gives more information about how the variables are **stored**, and divides variables into logical, integer, double or character
+
+R stores categorical variables as integers, but their true nature is revealed by their class, which is factor or ordered factor
+
+```{r}
+typeof(4)
+typeof(3.141)
+typeof("hello")
+class(4)
+class(3.14)
+class("hello")
+```
+
+These functions work on anything in R - even on themselves
+
+```{r}
+typeof(sqrt)
+class(sqrt)
+class(class)
+```
+
+### Division with integers
+```{r}
+#simple division
+25/7
+
+#The number of complete times 7 fits into 25 - an integer value
+25%/%7
+
+#25 modulo 7 - the remainder after taking 25%%7 7s away from 25
+25%%7
+```
+
+### Rounding numbers
+
+```{r}
+#round to the nearest whole number 
+round(163.141593)
+
+#round to the nearest while number
+round(163.141593,0)
+
+#round to one decimal place
+round(163.141593,1)
+
+#round to the nearest multipe of 10
+round(163.141593,-1)
+
+#round up
+ceiling(163.141593)
+
+#round down
+floor(163.141593)
+```
+
+### R Objects
+
+#### Numeric Objects
+
+```{r}
+x <- 2
+y <- 6.4
+x2 <- x^2
+fred <- 2*x+5
+wilma <- x+y
+a.simple.fraction <- (x+1)/(y+2)
+
+a.simple.fraction
+```
+
+### Logical objects
+
+```{r}
+
+2 < 3
+
+6 == (2+3)
+
+6 == (3+3)
+
+is.logical(2)
+bb <- TRUE
+is.logical(bb)
+is.numeric(4.1)
+is.logical(a.simple.fraction)
+is.logical(2>4)
+is.logical(fred)
+is.numeric(wilma)
+is.numeric(fred)
+is.character(wilma)
+
+class(a.simple.fraction)
+typeof(a.simple.fraction)
+
+class(wilma)
+typeof(wilma)
+```
