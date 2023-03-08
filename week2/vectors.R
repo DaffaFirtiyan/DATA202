@@ -1,4 +1,4 @@
-#vectors are a set of number put together by using the c() function. c stands for concatenate.
+#vectors are a set of number put together by using the c() function. c stands for concatenate. vector only has one dimension
 
 x <- c(2, 4.3, 6.6, 10, -1)
 x
